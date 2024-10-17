@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penspiration | Del din tegning</title>
+   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/reset.css">
+   <!--reference til Adobe fonte-->
+   <link rel="stylesheet" href="https://use.typekit.net/oyf5qcp.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="navigation_element">
+            <h1 class="text column" id="logo">Penspiration</h1>
+        </a>
+        <nav>
+            <ul class="page_navigation row">
+                <li><a href="kendditgrej.html" class="navigation_element text">Kend dit grej</a></li>
+                <li><a href="oevelser.html" class="navigation_element text">Øvelser</a></li>
+                <li><a href="inspirationskilder.html" class="navigation_element text">Inspirationskilder</a></li>
+                <li><a href="faellesskab.html" class="navigation_element text">Fællesskab</a></li>
+                <li><a href="bagom.html" class="navigation_element text">Bag om</a></li>
+            </ul>
+            <hr class="navigation_linje">
+            <ul class="page_navigation row" id="submenu">
+                <li><a href="galleri.html" class="navigation_element text submenu_text">Galleri</a></li>
+                <li><a href="form.html" class="navigation_element text submenu_text">Del dit værk</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="row text boks left form">
+        <h2 class="manchet2">Del dit værk</h2>
+        <br>
+        <br>
+    <form enctype="multipart/form-data" class="row">
+     
+        <div class="column left">
+            <label for="billede">Vælg dit billede her:</label><br>
+            <input type="file" id="billede" name="billede" accept=".jpg,.jpeg,.png" required onchange="visPreview(event)"><br><br>
+            <label for="kommentar">Fortæl om dit værk her:</label><br>
+            <textarea id="kommentar" name="kommentar" rows="10" cols="40" placeholder="(Max 250 tegn)" maxlength="250"></textarea><br><br>
+            <input class="button" type="button" value="Upload" onclick="myFunction()">
+        </div>
+        <div class="column boks2 preview">
+            <img class="column previewboks" id="preview" alt="Forhåndsvisning af billede">
+        </div>
+        <div>
+            
+        </div>
+       
+    </form>
+    </section>
+    
+    <!--Lavet vha. chatgpt-->
+    <script>
+        function visPreview(event) {
+            const billedeInput = event.target;
+            const fil = billedeInput.files[0];
+            const preview = document.getElementById('preview');
+
+            if (fil) {
+                const filLæser = new FileReader();
+                filLæser.onload = function(e) {
+                    preview.src = e.target.result;
+                    preview.style.display = 'block';  // Gør forhåndsvisning synlig
+                }
+                filLæser.readAsDataURL(fil);  // Læs filen som en data-url
+            } else {
+                preview.style.display = 'none';  // Skjul forhåndsvisning hvis der ikke er valgt fil
+            }
+        }
+
+
+
+function myFunction() {
+  alert("Succes! Dit billede er delt!");
+  window.location.replace("faellesskab.html");
+}
+    </script>

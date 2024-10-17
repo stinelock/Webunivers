@@ -1,0 +1,672 @@
+/*Størrelsesangivelser inkluderer padding og border */
+*{
+    box-sizing: border-box;
+  }
+
+/*-------------------------Generel tema---------------------------------*/
+body{
+  background-color:#F9FCE6;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+main{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.text{
+  font-family: "capitana", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16pt;
+  color:black;
+  line-height: 1.8;
+}
+
+/*---------------------------------flexcontainere------------------------------------------------*/
+
+.column{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.row{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.left{
+  align-items: flex-start;
+}
+
+.right{
+  align-items: flex-end;
+}
+
+.center{
+  justify-content: center;
+}
+/*--------------------------------Header navigation--------------------------------------*/
+
+header{
+  display:flex;
+  width: 100%;
+}
+
+#logo{
+  font-family: "scribo-regular", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 48pt;
+  margin: 25px 0 5px 0;
+}
+
+.page_navigation{
+  justify-content: space-around;
+  margin: 0 147px;
+}
+
+.navigation_element{
+  text-decoration: none;
+}
+
+.navigation_linje{
+  margin: 21px 85px;
+}
+
+#submenu{
+  justify-content: center;
+  margin: 0 270px 13px;
+}
+
+.submenu_text{
+  font-size: 10pt;
+  margin: 0 20px;
+}
+
+/*----------------------------------Billede CSS-------------------------------------*/
+.billede_frame{
+  width: 1513px;
+  height: 735px;
+  overflow: hidden;
+  margin: 0 0 41px 0;
+  z-index: 1;
+
+}
+.stortbillede{
+  max-width: 1413px;
+  height: auto;
+  margin: -245px 0 0 0;
+  z-index: 1;
+}
+
+/*-------------------------------------------Artikel intro CSS-----------------------------------------*/
+.artikel_intro{
+  flex-wrap: wrap;
+  padding: 0 25px;
+}
+
+.introkort{
+  flex-wrap: wrap;
+  width: 402px;
+  height: 520px;
+  overflow: hidden;
+  margin: 50px 25px;
+}
+
+.introbillede{
+  z-index: 1;
+}
+
+/*rød kasse og tekst, der skal vises ved hover*/
+.red{
+  position: absolute;
+  width: 402px;
+  height: 520px;
+  background-color: #FF3B3B;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 0.3s ease; /*overgangen ved hover (sker på 0,3 sekunder)*/
+}
+
+.hover_text{
+  color: #F9FCE6;
+  font-size: 48pt;
+  position: absolute;
+  line-height: 1.5;
+  z-index: 3;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/*hovereffekt*/
+.introkort:hover .hover_text{
+  opacity: 1;
+}
+
+.introkort:hover .red{
+  opacity: 0.3;
+}
+
+/*justering af billeder i introkort*/
+#blyantimg{
+  height: 1000px;
+  width: auto;
+  margin: -324px 0 0 -100px;
+}
+
+#papirimg{
+  height: 100%;
+  width: auto;
+}
+
+#malingimg{
+  height: 110%;
+  width: auto;
+}
+
+#musikimg{
+  height:100%;
+  width: auto;
+}
+
+#turimg{
+  height: 100%;
+  margin-left: -320px;
+}
+
+#telefonimg{
+  height: 110%;
+  margin-left: -25px;
+}
+
+#negativimg{
+  height: 130%;
+  margin-left: -45px;
+}
+
+#hoejrevenstreimg{
+  height: 120%;
+  margin-left: -20px;
+}
+
+#haandimg{
+  height: 200%;
+  margin-left: -150px;
+  margin-top: -120px;
+}
+/*---------------------------------------Tekst CSS----------------------------------------*/
+
+.overskrift1{
+  font-size: 50pt;
+  color:#F9FCE6;
+  position: absolute;
+  margin-top: -300px;
+  z-index: 2;
+}
+
+.overskrift2{
+  font-size: 36pt;
+  color:black;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.underoverskrift{
+  font-size: 36pt;
+  color:black;
+  line-height: 1.5;
+}
+
+.manchet1{
+  font-size: 24pt;
+  color:#F9FCE6;
+  position: absolute;
+  margin-top: 55px;
+  z-index: 2;
+  line-height: 1.8;
+  word-spacing: 5px;
+  white-space: wrap;
+  text-align: center;
+}
+
+.manchet2{
+  font-size: 24pt;
+  margin-top: 55px;
+  z-index: 2;
+  line-height: 1.8;
+  word-spacing: 5px;
+  white-space: wrap;
+  text-align: center;
+}
+
+.bold{
+  font-family: "capitana", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.midte{
+  text-align: center;
+  line-height: 2;
+  margin-top: 30px;
+}
+
+.tip{
+  color: #4470AD;
+}
+
+/*------------------------------------------------Artikel CSS------------------------------------------------------*/
+.tekstboks{
+  background-color:rgb(249, 252, 230,0.6);
+  z-index: 2;
+  width: 750px;
+  height:auto;
+  padding: 80px;
+}
+
+.tipboks{
+  background-color:rgb(136, 177, 235,0.45);
+  min-width: 737px;
+  max-width: 1000px;
+  height: auto;
+  padding: 80px;
+  margin: 70px 0 0 0;
+}
+
+/*Google icon*/
+
+
+.icon{
+  background-color: rgb(249, 252, 230,0.76);
+  border-radius: 90px;
+  position: sticky;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+  text-decoration: none;
+  margin-left: -20px;
+  height: 25px;
+  width: 25px;
+}
+
+.farveboks{
+  width: 100px;
+  height: 100px;
+  border-radius: 20px;
+  background-color: #E1A792;
+  margin: 10px;
+}
+
+#blaa{
+  background-color: #82ACE9;
+}
+
+#lysgul{
+  background-color: #F0CA83;
+}
+
+#gul{
+  background-color: #C69354;
+}
+
+#graa{
+  background-color: #636568;
+}
+
+/*------------------------------------------------Blyanten CSS----------------------------------------*/
+/*Store introbillede*/
+#blyant{
+  max-width: none;
+  width: 150%;
+  margin-top: -500px;
+  
+}
+
+/*Tekst 1*/
+
+/*billederammen*/
+#blyant_frame1{
+  max-width: 743px;
+  max-height: 668px;
+  margin: 180px 0 41px -150px;
+}
+
+/*placering af tekstboks*/
+#blyant_tekst1{
+margin:100px -50px 0 0;
+}
+
+/*placering af billede i frame*/
+#blyant1{
+  width: 130%;
+  height: auto;
+  margin-top: -400px;
+}
+
+/*Tekst 2*/
+#blyant_frame2{
+  max-width: 769px;
+  max-height: 750px;
+  margin: 180px -150px 41px 0;
+}
+
+#blyant_tekst2{
+  margin:200px 0 0 -50px;
+  padding: 200px 80px;
+}
+
+#blyant2{
+  width: 100%;
+  height: auto;
+  margin-left: -75px;
+  margin-top: 10px;
+}
+
+
+/*Tekst 3*/
+#blyant_frame3{
+  max-width: 693px;
+  max-height: 905px;
+  margin: 180px 0 41px -150px;
+}
+
+#blyant_tekst3{
+  margin:0 -50px 100px 0;
+  padding: 200px 80px;
+}
+
+#blyant3{
+  width: 100%;
+  height: auto;
+  margin-top: -200px;
+}
+
+/*Tekst 4*/
+#blyant_frame4{
+  max-width: 693px;
+  max-height: 905px;
+  margin: 180px -150px 41px 0;
+}
+
+#blyant_tekst4{
+  margin:200px 0 0 -50px;
+  padding: 200px 80px;
+}
+
+#blyant4{
+  width: 150%;
+  height: auto;
+  margin-top: -400px;
+  margin-left: -100px;
+}
+
+
+/*------------------------------------------------Gå en tur CSS----------------------------------------*/
+#gaatur{
+  max-width: none;
+  width: 120%;
+  height: auto
+}
+
+#svampe_frame{
+  max-width: 769px;
+  max-height: 750px;
+  margin: 50px 0 41px -150px;
+}
+
+#svampetekst{
+  min-height: 200px;
+  max-height: 900px;
+  margin:0px -50px 0 0;
+  padding: 80px;
+}
+
+#svampe{
+  width: 100%;
+  height: auto;
+  margin-left: -75px;
+  margin-top: 10px;
+}
+
+#grene_frame{
+  max-width: 769px;
+  max-height: 750px;
+  margin: 50px -150px 41px 0;
+}
+
+#grenetekst{
+  margin:200px 0 0 -50px;
+  padding: 200px 80px;
+}
+
+#grene{
+  width: 100%;
+  height: auto;
+  margin-left: -75px;
+  margin-top: -100px;
+}
+
+#by_frame{
+  max-width: 769px;
+  max-height: 750px;
+  margin: 100px 0 41px -150px;
+}
+
+#bytekst{
+  margin:-150px -50px 0 0;
+  padding: 80px 80px;
+}
+
+#by{
+  width: 100%;
+  height: auto;
+  margin-left: -75px;
+  margin-top: 10px;
+}
+
+#bytekst2{
+  margin: 50px 0;
+}
+
+#farver{
+  z-index: 5;
+  margin-top: -250px;
+  margin-right: -300px;
+}
+
+
+/*------------------------------------------------Højre vs. venstre CSS----------------------------------------*/
+
+#hoveder{
+  max-width: none;
+  width: 120%;
+  height: auto
+}
+
+#hoejre_frame1{
+  max-width: 769px;
+  max-height: 750px;
+  margin: 50px 0 41px -150px;
+}
+
+#hoejretekst1{
+  margin:-150px -50px 0 0;
+  padding: 80px 80px;
+}
+
+#hoejre1{
+  width: 100%;
+  height: auto;
+  margin-left: -75px;
+  margin-top: 10px;
+}
+
+#hoejre_frame2{
+  max-width: 769px;
+  max-height: 750px;
+  margin: 50px -150px 41px 0;
+}
+
+#hoejretekst2{
+  margin:150px -50px 0 0;
+  padding: 80px 80px;
+}
+
+#hoejre2{
+  width: 100%;
+  height: auto;
+  margin-left: -30px;
+  margin-top: -150px;
+}
+
+#hoejre_frame3{
+  max-width: 769px;
+  max-height: 750px;
+  margin: 50px 0 41px -150px;
+}
+
+#hoejretekst3{
+  margin:-150px -50px 0 0;
+  padding: 80px 80px;
+}
+
+#hoejre3{
+  width: auto;
+  height: 100%;
+  margin-left: -675px;
+  margin-top: 10px;
+}
+
+/*----------------------------------------------Bag om CSS--------------------------------------------------*/
+#mig{
+  max-width: none;
+  width: 200%;
+  height: auto;
+  margin-bottom: -500px;
+  margin-left: -300px;
+}
+
+#mig2{
+  width: 100%;
+  height: auto;
+  margin-top: -100px;
+}
+
+#mig_frame3{
+  max-width: 769px;
+  max-height: 850px;
+  margin: 75px -150px 50px 0;
+}
+
+#mig3{
+  width: 100%;
+  height: auto;
+  margin-bottom: -100px;
+}
+
+/*----------------------------------------------Galleri CSS--------------------------------------------------*/
+
+.galleri{
+  flex-wrap: wrap;
+  width: 402px;
+  height: 520px;
+  overflow: hidden;
+  margin: 50px;
+  object-fit: cover;
+}
+
+#plusknap{
+  width: 50px;
+  height: 50px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-decoration: none;
+}
+
+#plus{
+  color: #F9FCE6;
+  font-size: 36pt;
+  font-weight: 50;
+}
+
+.material-icons {
+  font-size: 36px;
+  color:black;
+  margin-bottom: 5px;
+}
+
+#up{
+ margin-top: -475px;
+}
+
+/*----------------------------------------------Formular CSS--------------------------------------------------*/
+
+
+.boks{
+  border: black 1pt solid;
+  border-radius: 20pt;
+  justify-content: flex-start;
+  width: 1100px;
+  height: 650px;
+  padding: 0 100px;
+  margin: 50px;
+}
+
+.boks2{
+  border: black 1pt solid;
+  border-radius: 20pt;
+  width: 400px;
+  height: 500px;
+  margin: -70px 50px 0 50px;
+}
+
+.previewboks{
+  border: black 1pt solid;
+  border-radius: 20pt;
+  width: auto;
+  height: 500px;
+}
+
+#kommentar{
+  margin-right: 50px;
+}
+
+#billede{
+  max-height: 500px;
+  width: auto;
+  align-content: center;
+}
+
+#preview {
+  display: none;
+  overflow: hidden;
+  margin:0;
+  object-fit: cover;
+  object-position: center;
+  width: 397.5px;
+  height: 500px;
+  border: none;
+}
+
+.button{
+  background-color: #F45C5C;
+  border:none;
+  color: white;
+  border-radius: 10px;
+  width: 100px;
+  height: 50px;
+  margin-top: -50px;
+}
